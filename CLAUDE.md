@@ -92,6 +92,18 @@ Terre-Sereine/
 8. **Liens navbar** : `Maison/Rituels/Marques/Lieu` (ancres internes) → `À propos/Services/Galerie/Contact` (pages dédiées).
 9. **Une page par service** plutôt qu'une seule page services, pour le SEO local.
 10. **Carte OpenStreetMap** plutôt que Google Maps sur la page contact (zéro tracking, zéro clé API requise).
+11. **Fondatrices** : Claudia & Chloé (confirmé par le client le 2026-04-28).
+12. **Hover navbar** : underline doré animé au lieu d'un fond brun arrondi — esprit éditorial discret. Couleur du lien passe en `gold-deep` au hover/active.
+13. **Sous-menu Services** :
+    - **Desktop / tablette** : dropdown ivoire blur au hover/focus de "Services", caret SVG qui pivote, pont invisible (`::before`) pour stabiliser le hover.
+    - **Mobile** : sous-liste **fermée par défaut**, dépliée par un bouton rond avec caret à droite de "Services". Lien "Services" lui-même reste cliquable vers la page liste.
+14. **Menu overlay mobile éditorial** : background gradient 165°, watermark géant "SEREINE" en Italiana, brand en haut (logo + nom), navigation numérotée 01-05 avec trait doré au hover, bloc coordonnées (tel/email/horaires), CTA "Prendre rendez-vous" pleine largeur, socials en bas. Apparition en cascade des 5 sections (delay 80ms).
+15. **Watermark animé sur les page-header** : reprend l'animation `heroGlide` du hero (translation horizontale infinie, 46s linear). Mot répété 4× avec `·` dans `data-watermark` pour garantir une boucle invisible.
+
+## Animations CSS partagées
+- `heroGlide` (46s linear infinite) : utilisé par `.hero::before` ET `.page-header::before`
+- `liveBlink`, `navPulse`, `spinBadge` : pulsations diverses (hero badge, nav CTA, RDV badge)
+- Toutes les animations respectent `prefers-reduced-motion`
 
 ## Placeholders à compléter avant mise en ligne
 
