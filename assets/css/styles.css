@@ -6,7 +6,7 @@
 :root {
   --cream: #f9f5f0;       /* Fond principal */
   --ivory: #fdfaf5;       /* Très clair (cards, mobile-menu) */
-  --beige: #efe6da;       /* Beige clair (variations de surfaces) */
+  --beige: #f2e3d4;       /* Fond bouton clair (état repos) */
   --gold: #bfa27c;        /* Accent doré */
   --gold-deep: #5a3f2e;   /* Brun bouton (CTA foncé) */
   --brown: #4f3528;       /* Brun titre */
@@ -3709,11 +3709,17 @@ a.rituel {
 
 .site-loader {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
   background: #f8e6d0;
   z-index: 9999;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
   transition: opacity 0.55s ease;
 }
@@ -3727,8 +3733,11 @@ a.rituel {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 460px;
   max-width: 80%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .site-loader-rond {
