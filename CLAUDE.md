@@ -16,11 +16,11 @@ Issu d'une maquette one-page validée par le client (commit `4a1fb92`), désorma
 
 ## Marques partenaires (3 maisons)
 - **Dermalogica** (visage) — wordmark typographique caps letterspacé
-- **Bioslimming** (corps) — wordmark Cormorant Garamond italic
+- **Bioslimming** (corps) — wordmark Playfair Display italic
 - **House of Peau** (visage & corps, soin holistique) — logo image (`assets/images/house-of-peau-logo.webp`) — confirmé par le client le 2026-04-30
 
 ## Stack
-HTML5 statique multipages + CSS externe + JS vanilla. Google Fonts (Cormorant Garamond + Manrope, 2 polices uniquement). Photos WebP locales + Unsplash.
+HTML5 statique multipages + CSS externe + JS vanilla. Google Fonts (Playfair Display + Montserrat, 2 polices uniquement). Photos WebP locales + Unsplash.
 
 **Pas de framework, pas de build step.** Le site est servable tel quel par n'importe quel hébergeur statique.
 
@@ -32,7 +32,7 @@ Palette extraite du logo client :
 - Or `#B8874E` · Or profond `#9A6E38` · Brun `#6E4A2F`
 - Terracotta `#C47B5A` · Encre `#2B1F16`
 
-Typos : Cormorant Garamond (titres + accents italiques), Manrope (corps). Deux polices, point.
+Typos : Playfair Display (titres + accents italiques), Montserrat (corps). Deux polices, point.
 
 ## Élément signature
 **Agate scroll-liée** : bouton de retour-en-haut en bas-droite avec anneaux concentriques qui s'allument progressivement au fur et à mesure du scroll.
@@ -99,7 +99,7 @@ Terre-Sereine/
 13. **Sous-menu Services** :
     - **Desktop / tablette** : dropdown ivoire blur au hover/focus de "Services", caret SVG qui pivote, pont invisible (`::before`) pour stabiliser le hover.
     - **Mobile** : sous-liste **fermée par défaut**, dépliée par un bouton rond avec caret à droite de "Services". Lien "Services" lui-même reste cliquable vers la page liste.
-14. **Menu overlay mobile éditorial** : background gradient 165°, watermark géant "SEREINE" en Cormorant Garamond, brand en haut (logo + nom), navigation numérotée 01-05 avec trait doré au hover, bloc coordonnées (tel/email/horaires), CTA "Prendre rendez-vous" pleine largeur, socials en bas. Apparition en cascade des 5 sections (delay 80ms).
+14. **Menu overlay mobile éditorial** : background gradient 165°, watermark géant "SEREINE" en Playfair Display, brand en haut (logo + nom), navigation numérotée 01-05 avec trait doré au hover, bloc coordonnées (tel/email/horaires), CTA "Prendre rendez-vous" pleine largeur, socials en bas. Apparition en cascade des 5 sections (delay 80ms).
 15. **Watermark animé sur les page-header** : reprend l'animation `heroGlide` du hero (translation horizontale infinie, 46s linear). Mot répété 4× avec `·` dans `data-watermark` pour garantir une boucle invisible.
 16. **Ajout 7e service Nanoneedling** (2026-04-30) : technique innovante non invasive de micro-pointes, soin visage éclat. Texte fourni par Claudia. Pas de photo client → placeholder CSS (`.photo-placeholder` + variante `.photo-placeholder-sm`) en attendant. Page complète sur le modèle de Hydra Face.
 17. **Passage à 3 marques partenaires** (2026-04-30) : House of Peau (initialement en attente) confirmée par Claudia. Layout `marques-grid` passe de 2 à 3 colonnes via classe additive `.marques-grid-3` (responsive 3 → 2 → 1 col à 1100px et 720px). Logo image (vs wordmark texte) intégré via classe `.marque-logo-img`.
