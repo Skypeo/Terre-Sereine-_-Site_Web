@@ -14,11 +14,19 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Fraunces:ital,wght@0,300..700;1,300..700&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body>
+<body class="is-loading">
+
+  <!-- Loader (premier chargement) -->
+  <div class="site-loader" id="siteLoader" role="status" aria-label="Chargement de Terre Sereine">
+    <div class="site-loader-col">
+      <div class="site-loader-rond"><img src="assets/loader/logo-round-feathered.png" alt="" width="220" height="220"></div>
+      <div class="site-loader-text"><img src="assets/loader/logo-text-feathered.png" alt="Terre Sereine — Maison de Bien-être &amp; de Beauté"></div>
+    </div>
+  </div>
 
   <header class="header" id="header">
     <a href="/" class="brand" aria-label="Terre Sereine — Accueil">
@@ -34,6 +42,7 @@
         <div class="submenu" role="menu" aria-label="Nos services">
           <a href="services/headspa.html" role="menuitem">Head <em>Spa</em></a>
           <a href="services/hydra-face.html" role="menuitem">Hydra <em>Face</em></a>
+          <a href="services/nanoneedling.html" role="menuitem">Nano<em>needling</em></a>
           <a href="services/maderotherapie.html" role="menuitem">Madero<em>thérapie</em></a>
           <a href="services/drainage-lymphatique.html" role="menuitem">Drainage <em>lymphatique</em></a>
           <a href="services/sauna-dome.html" role="menuitem">Sauna <em>Dôme</em></a>
@@ -81,6 +90,7 @@
           <ul class="mobile-sublist" id="mobile-services-sublist">
             <li><a href="services/headspa.html">Head Spa</a></li>
             <li><a href="services/hydra-face.html">Hydra Face</a></li>
+            <li><a href="services/nanoneedling.html">Nanoneedling</a></li>
             <li><a href="services/maderotherapie.html">Maderothérapie</a></li>
             <li><a href="services/drainage-lymphatique.html">Drainage lymphatique</a></li>
             <li><a href="services/sauna-dome.html">Sauna dôme</a></li>
@@ -194,6 +204,7 @@
         <ul>
           <li><a href="services/headspa.html">Head Spa</a></li>
           <li><a href="services/hydra-face.html">Hydra Face</a></li>
+          <li><a href="services/nanoneedling.html">Nanoneedling</a></li>
           <li><a href="services/maderotherapie.html">Maderothérapie</a></li>
           <li><a href="services/drainage-lymphatique.html">Drainage lymphatique</a></li>
           <li><a href="services/sauna-dome.html">Sauna dôme</a></li>

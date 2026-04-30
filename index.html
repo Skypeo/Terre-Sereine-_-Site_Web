@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terre Sereine — Maison de bien-être & de beauté · Woippy 57140</title>
+  <title>Terre Sereine — Institut de beauté & spa à Woippy près de Metz (57140)</title>
   <meta name="description"
-    content="Institut de beauté et maison de bien-être à Woippy (Moselle). Headspa, Hydra Face Dermalogica, Maderothérapie Bioslimming, drainage lymphatique, sauna dôme, massage pierres chaudes. Sur rendez-vous.">
+    content="Institut de beauté à Woippy, à deux pas de Metz : soins du visage Dermalogica, massages signature, sauna dôme infrarouge, drainage lymphatique. Spa & bien-être en Moselle (57140), sur rendez-vous.">
   <meta name="author" content="Terre Sereine">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#F0E3CD">
@@ -15,15 +15,15 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="Terre Sereine">
-  <meta property="og:title" content="Terre Sereine — Maison de bien-être & de beauté · Woippy">
+  <meta property="og:title" content="Terre Sereine — Institut de beauté & spa à Woippy près de Metz">
   <meta property="og:description"
-    content="Institut de beauté à Woippy : Headspa, Hydra Face Dermalogica, Maderothérapie Bioslimming, drainage lymphatique, sauna dôme infrarouge, pierres chaudes.">
+    content="Soins du visage, massages, sauna dôme infrarouge, drainage lymphatique. Institut de beauté à Woippy (57140), à deux pas de Metz.">
   <meta property="og:url" content="https://terre-sereine.fr/">
   <meta property="og:image" content="https://terre-sereine.fr/assets/logoTerreSereine-sansFond.png">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Terre Sereine — Maison de bien-être & de beauté · Woippy">
-  <meta name="twitter:description" content="Institut de beauté et maison de bien-être à Woippy. Sur rendez-vous.">
+  <meta name="twitter:title" content="Terre Sereine — Institut de beauté & spa à Woippy près de Metz">
+  <meta name="twitter:description" content="Soins du visage, massages, sauna infrarouge. Institut de beauté à Woippy (57140), aux portes de Metz.">
   <meta name="twitter:image" content="https://terre-sereine.fr/assets/logoTerreSereine-sansFond.png">
 
   <link rel="icon" type="image/png" href="assets/logoTerreSereine-sansFond.png">
@@ -33,7 +33,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://images.unsplash.com">
   <link
-    href="https://fonts.googleapis.com/css2?family=Italiana&family=Fraunces:ital,wght@0,300..700;1,300..700&family=Manrope:wght@300;400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Manrope:wght@300;400;500;600&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 
@@ -43,7 +43,7 @@
     "@type": "BeautySalon",
     "@id": "https://terre-sereine.fr/#business",
     "name": "Terre Sereine",
-    "description": "Maison de bien-être et de beauté à Woippy : Headspa, Hydra Face Dermalogica, Maderothérapie Bioslimming, drainage lymphatique, sauna dôme infrarouge, massage pierres chaudes.",
+    "description": "Institut de beauté & spa à Woippy (57140), à deux pas de Metz. Soins du visage Dermalogica, massages signature, drainage lymphatique, sauna dôme infrarouge, maderothérapie. Maison de bien-être en Moselle, sur rendez-vous.",
     "url": "https://terre-sereine.fr/",
     "logo": "https://terre-sereine.fr/assets/logoTerreSereine-sansFond.png",
     "image": "https://terre-sereine.fr/assets/logoTerreSereine-sansFond.png",
@@ -76,6 +76,7 @@
     "makesOffer": [
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Headspa", "url": "https://terre-sereine.fr/services/headspa.html" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hydra Face Dermalogica", "url": "https://terre-sereine.fr/services/hydra-face.html" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Nanoneedling", "url": "https://terre-sereine.fr/services/nanoneedling.html" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Maderothérapie Bioslimming", "url": "https://terre-sereine.fr/services/maderotherapie.html" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Drainage lymphatique", "url": "https://terre-sereine.fr/services/drainage-lymphatique.html" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sauna dôme infrarouge", "url": "https://terre-sereine.fr/services/sauna-dome.html" } },
@@ -85,7 +86,15 @@
   </script>
 </head>
 
-<body>
+<body class="is-loading">
+
+  <!-- Loader (premier chargement) -->
+  <div class="site-loader" id="siteLoader" role="status" aria-label="Chargement de Terre Sereine">
+    <div class="site-loader-col">
+      <div class="site-loader-rond"><img src="assets/loader/logo-round-feathered.png" alt="" width="220" height="220"></div>
+      <div class="site-loader-text"><img src="assets/loader/logo-text-feathered.png" alt="Terre Sereine — Maison de Bien-être &amp; de Beauté"></div>
+    </div>
+  </div>
 
   <header class="header" id="header">
     <a href="/" class="brand" aria-label="Terre Sereine — Accueil">
@@ -105,6 +114,7 @@
         <div class="submenu" role="menu" aria-label="Nos services">
           <a href="services/headspa.html" role="menuitem">Head <em>Spa</em></a>
           <a href="services/hydra-face.html" role="menuitem">Hydra <em>Face</em></a>
+          <a href="services/nanoneedling.html" role="menuitem">Nano<em>needling</em></a>
           <a href="services/maderotherapie.html" role="menuitem">Madero<em>thérapie</em></a>
           <a href="services/drainage-lymphatique.html" role="menuitem">Drainage <em>lymphatique</em></a>
           <a href="services/sauna-dome.html" role="menuitem">Sauna <em>Dôme</em></a>
@@ -159,6 +169,7 @@
           <ul class="mobile-sublist" id="mobile-services-sublist">
             <li><a href="services/headspa.html">Head Spa</a></li>
             <li><a href="services/hydra-face.html">Hydra Face</a></li>
+            <li><a href="services/nanoneedling.html">Nanoneedling</a></li>
             <li><a href="services/maderotherapie.html">Maderothérapie</a></li>
             <li><a href="services/drainage-lymphatique.html">Drainage lymphatique</a></li>
             <li><a href="services/sauna-dome.html">Sauna dôme</a></li>
@@ -210,12 +221,12 @@
       <div class="hero-meta">
         <span class="rule"></span>
         <span class="chapter">N° 01</span>
-        <span class="label">Institut · Woippy · Depuis 2026</span>
+        <span class="label">Institut de beauté · Woippy · Aux portes de Metz</span>
       </div>
-      <h1 class="hero-title">L'art de la<br><span class="i">beauté sereine.</span></h1>
+      <h1 class="hero-title">L'art du soin,<br>à&nbsp;<span class="i">Woippy.</span></h1>
       <p class="hero-lede">
-        Une maison de bien-être à Woippy où le geste artisanal, les marques d'exception et le silence rituel
-        s'unissent pour sublimer votre beauté naturelle.
+        Institut de beauté &amp; spa à Woippy (57140), à deux pas de Metz. Soins du visage Dermalogica,
+        massages signature, sauna dôme infrarouge — une maison de bien-être pensée comme un refuge.
       </p>
       <div class="hero-actions">
         <a href="contact.html" class="hero-cta">Prendre rendez-vous <span class="arrow"></span></a>
@@ -227,8 +238,8 @@
       <span class="hero-tag"><span class="live"></span>Ouvert · Woippy</span>
       <div class="frame">
         <img src="assets/images/hero-soin-mains.webp"
-          alt="Geste soin Terre Sereine — application d'un sérum sur les mains" width="1600" height="2400" loading="eager"
-          fetchpriority="high">
+          alt="Geste soin Terre Sereine — application d'un sérum sur les mains" width="1600" height="2400"
+          loading="eager" fetchpriority="high">
       </div>
       <span class="hero-vertical">Onsen éditorial · Claudia & Chloé</span>
       <div class="hero-badge">
@@ -254,19 +265,22 @@
         <span class="eyebrow">— Philosophie</span>
         <h2>Une parenthèse,<br>une <span class="i">respiration</span>.</h2>
         <p class="maison-lede">
-          Terre Sereine est une maison de bien-être et de beauté pensée comme un refuge.
-          Un lieu à Woippy où le temps se suspend, où la matière, le geste et le soin dialoguent.
+          Terre Sereine est l'institut de beauté de Woippy (57140), à 5 minutes de Metz.
+          Un spa &amp; maison de bien-être pensé comme un refuge — où le temps se suspend,
+          où la matière, le geste et le soin dialoguent.
         </p>
         <div class="maison-body">
           <p>
             Nous avons bâti cette maison autour d'une idée simple : prendre soin de soi
             n'est pas un luxe, c'est un retour. Un retour à la matière, au souffle,
-            à la lenteur. Chaque rituel y est pensé pour rééquilibrer le corps et l'esprit.
+            à la lenteur. Chaque rituel — soin du visage, massage, drainage — est pensé
+            pour rééquilibrer le corps et l'esprit.
           </p>
           <p>
-            Nous travaillons avec des marques d'exception — <strong>Dermalogica</strong> pour
-            le visage, <strong>Bioslimming</strong> pour le corps — et des techniques
-            sensorielles : maderothérapie, pierres chaudes, drainage lymphatique, sauna dôme.
+            Nous travaillons avec trois marques d'exception — <strong>Dermalogica</strong>
+            et <strong>House of Peau</strong> pour le visage, <strong>Bioslimming</strong>
+            pour le corps — et des techniques sensorielles : maderothérapie, pierres chaudes,
+            drainage lymphatique, sauna dôme infrarouge.
           </p>
           <p style="margin-top:24px;">
             <a href="a-propos.html" class="hero-ghost">En savoir plus sur la maison</a>
@@ -298,10 +312,10 @@
   <!-- === LES RITUELS === -->
   <section class="rituels" id="rituels">
     <div class="rituels-head">
-      <h2>Nos <span class="i">rituels</span><br>du soin</h2>
+      <h2>Nos <span class="i">soins</span><br>&amp; rituels</h2>
       <p class="rituels-intro">
-        Six rituels, six manières de retrouver son équilibre. Chaque soin est personnalisé,
-        prolongé par un moment de thé et de silence.
+        Sept rituels, sept manières de retrouver son équilibre. Chaque soin du visage,
+        massage ou rituel corps est personnalisé, prolongé par un moment de thé et de silence.
       </p>
     </div>
     <div class="rituels-grid">
@@ -311,12 +325,8 @@
         <div class="rituel-photo"><img src="assets/images/headspa-rituel-capillaire.webp"
             alt="Soin Headspa, rituel capillaire japonais" width="240" height="240" loading="lazy"></div>
         <h3>Head <span class="i">Spa</span></h3>
-        <p>Le Head Spa Kérastase est un rituel d’exception dédié à la beauté du cuir chevelu et des cheveux. Véritable
-          parenthèse de bien-être, ce soin luxueux allie l’expertise professionnelle de Kérastase à des techniques de
-          massage inspirées des traditions asiatiques pour offrir une expérience sensorielle unique. Après un diagnostic
-          personnalisé, le soin est entièrement adapté aux besoins de votre cuir chevelu et de votre fibre capillaire.
-          Des produits haut de gamme sont appliqués avec précision, tandis qu’un massage profond stimule la
-          microcirculation, libère les tensions et favorise une relaxation intense.</p>
+        <p>Lavage en profondeur, massage crânien, vapeur d'eau thermale. Un soin japonais qui relâche les tensions et réveille la brillance des cheveux.</p>
+        <span class="rituel-cta">Découvrir le rituel<span class="cta-arrow" aria-hidden="true">→</span></span>
         <span class="rituel-arrow" aria-hidden="true">→</span>
       </a>
 
@@ -326,64 +336,66 @@
             alt="Soin visage Hydra Face Dermalogica" width="240" height="240" loading="lazy"></div>
         <h3>Hydra <span class="i">Face</span></h3>
         <div class="rituel-duration">Dermalogica</div>
-        <p>Nettoyage, exfoliation, extraction douce, sérum sur-mesure. Le protocole Dermalogica adapté à votre peau pour
-          un éclat immédiat et durable.</p>
+        <p>Le soin nouvelle génération pour une peau parfaite. Un teint frais, lumineux et éclatant dès la première séance, sans éviction sociale.</p>
+        <span class="rituel-cta">Découvrir le rituel<span class="cta-arrow" aria-hidden="true">→</span></span>
         <span class="rituel-arrow" aria-hidden="true">→</span>
       </a>
 
-      <a class="rituel" href="services/maderotherapie.html">
-        <div class="rituel-num">Soin corps</div>
+      <a class="rituel" href="services/nanoneedling.html">
+        <div class="rituel-num">Soin visage éclat</div>
+        <div class="rituel-photo"><div class="photo-placeholder photo-placeholder-sm" role="img" aria-label="Photo Nanoneedling à venir"><span class="photo-placeholder-title">Nano<em>needling</em></span></div></div>
+        <h3>Nano<span class="i">needling</span></h3>
+        <p>Des micro-pointes très fines stimulent la peau en douceur. Effet « peau neuve » sans douleur, pour un éclat retrouvé tout en respect.</p>
+        <span class="rituel-cta">Découvrir le rituel<span class="cta-arrow" aria-hidden="true">→</span></span>
+        <span class="rituel-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="rituel rituel--wide" href="services/maderotherapie.html">
         <div class="rituel-photo"><img src="assets/images/maderotherapie-outils-bois.webp"
             alt="Maderothérapie aux outils de bois" width="240" height="240" loading="lazy"></div>
-        <h3>Madero<span class="i">thérapie</span></h3>
-        <div class="rituel-duration">Bioslimming</div>
-        <p>La madérothérapie est une technique de massage d’origine colombienne utilisant des instruments en bois
-          spécialement conçus pour sculpter, tonifier et revitaliser le corps. Particulièrement reconnue pour son
-          efficacité sur la cellulite, elle agit en profondeur pour lisser la peau, atténuer l’aspect peau d’orange et
-          redessiner harmonieusement la silhouette</p>
+        <div class="rituel-body">
+          <div class="rituel-num">Soin corps</div>
+          <h3>Madero<span class="i">thérapie</span></h3>
+          <div class="rituel-duration">Bioslimming</div>
+          <p>Sculpture corporelle aux outils de bois. Technique colombienne pour remodeler, raffermir et redessiner harmonieusement la silhouette.</p>
+          <span class="rituel-cta">Découvrir le rituel<span class="cta-arrow" aria-hidden="true">→</span></span>
+        </div>
         <span class="rituel-arrow" aria-hidden="true">→</span>
       </a>
 
-      <a class="rituel" href="services/drainage-lymphatique.html">
-        <div class="rituel-num">Soin minceur</div>
+      <a class="rituel rituel--wide" href="services/drainage-lymphatique.html">
         <div class="rituel-photo"><img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=600&q=80"
             alt="Drainage lymphatique manuel" width="240" height="240" loading="lazy"></div>
-        <h3>Drainage <span class="i">lymphatique</span></h3>
-        <p>Le drainage lymphatique est un soin incontournable pour retrouver légèreté, confort et une silhouette
-          harmonieuse. Grâce à ses mouvements doux, précis et rythmés, il stimule la circulation de la lymphe,
-          favorisant ainsi l’élimination des toxines et des excès de liquides accumulés dans les tissus.
-
-          Particulièrement efficace contre la cellulite, il aide à décongestionner les zones concernées, à lisser
-          l’aspect de la peau et à atténuer visiblement l’effet peau d’orange au fil des séances. En améliorant la
-          circulation et en réduisant la rétention d’eau, le drainage lymphatique contribue à raffermir les tissus et à
-          redessiner les contours du corps.</p>
+        <div class="rituel-body">
+          <div class="rituel-num">Soin minceur</div>
+          <h3>Drainage <span class="i">lymphatique</span></h3>
+          <p>Mouvements doux et précis pour relancer la circulation. Légèreté retrouvée, silhouette affinée, une véritable sensation de renaissance.</p>
+          <span class="rituel-cta">Découvrir le rituel<span class="cta-arrow" aria-hidden="true">→</span></span>
+        </div>
         <span class="rituel-arrow" aria-hidden="true">→</span>
       </a>
 
-      <a class="rituel" href="services/sauna-dome.html">
-        <div class="rituel-num">Chaleur sèche</div>
+      <a class="rituel rituel--wide" href="services/sauna-dome.html">
         <div class="rituel-photo"><img src="assets/images/sauna-dome-infrarouge.webp" alt="Sauna dôme infrarouge"
             width="240" height="240" loading="lazy"></div>
-        <h3>Sauna <span class="i">Dôme</span></h3>
-        <p>Le Sauna Dôme est une technologie de bien-être innovante qui associe chaleur infrarouge et relaxation
-          profonde. Confortablement installé, le corps est enveloppé d’une douce chaleur, tandis que la tête reste à
-          l’extérieur, permettant une sensation de confort et de légèreté tout au long de la séance.Idéal pour se
-          relaxer, dénouer les tensions et retrouver de l’énergie, améliorer la qualité de la peau et éliminer les
-          toxines</p>
+        <div class="rituel-body">
+          <div class="rituel-num">Chaleur sèche</div>
+          <h3>Sauna <span class="i">Dôme</span></h3>
+          <p>Le dôme infrarouge enveloppe le corps sans chauffer la tête. Détoxification profonde, relâchement musculaire, sommeil réparateur.</p>
+          <span class="rituel-cta">Découvrir le rituel<span class="cta-arrow" aria-hidden="true">→</span></span>
+        </div>
         <span class="rituel-arrow" aria-hidden="true">→</span>
       </a>
 
-      <a class="rituel" href="services/pierres-chaudes.html">
-        <div class="rituel-num">Massage signature</div>
+      <a class="rituel rituel--wide" href="services/pierres-chaudes.html">
         <div class="rituel-photo"><img src="assets/images/massage-pierres-chaudes.webp"
             alt="Massage aux pierres chaudes basaltiques" width="240" height="240" loading="lazy"></div>
-        <h3>Pierres <span class="i">chaudes</span></h3>
-        <p>Massage pierre chaude Le massage aux pierres chaudes est une invitation à la détente profonde et au
-          lâcher-prise. Cette technique ancestrale associe les bienfaits du massage traditionnel à la chaleur apaisante
-          de pierres volcaniques, soigneusement chauffées et disposées sur des points stratégiques du corps.Idéal pour
-          réduire le stress, améliorer la circulation sanguine et rééquilibrer les énergies, le massage aux pierres
-          chaudes offre une expérience sensorielle unique. C’est un véritable voyage de relaxation, où le corps et
-          l’esprit retrouvent calme, sérénité et vitalité.</p>
+        <div class="rituel-body">
+          <div class="rituel-num">Massage signature</div>
+          <h3>Pierres <span class="i">chaudes</span></h3>
+          <p>Basaltes volcaniques chauffés, glissés le long des méridiens. Un voyage de relaxation où corps et esprit retrouvent leur calme.</p>
+          <span class="rituel-cta">Découvrir le rituel<span class="cta-arrow" aria-hidden="true">→</span></span>
+        </div>
         <span class="rituel-arrow" aria-hidden="true">→</span>
       </a>
 
@@ -394,8 +406,8 @@
   <section class="marques" id="marques">
     <div class="marques-inner">
       <div class="marques-eyebrow">Marques partenaires</div>
-      <h2>Deux signatures<br>d'<span class="i">exception</span>.</h2>
-      <div class="marques-grid">
+      <h2>Trois signatures<br>d'<span class="i">exception</span>.</h2>
+      <div class="marques-grid marques-grid-3">
 
         <div class="marque">
           <div class="marque-logo">
@@ -404,8 +416,8 @@
           <div class="marque-tag">Visage · Expertise clinique</div>
           <h3>Dermalogica</h3>
           <p>
-            Née à Los Angeles en 1986, Dermalogica est la référence mondiale des soins
-            du visage sur-mesure. Des formules actives, propres, cliniquement testées,
+            Référence mondiale en soins de la peau, reconnue pour son approche personnalisée
+            et ses résultats visibles. Des formules actives, propres, cliniquement testées,
             adaptées à chaque type de peau.
           </p>
           <ul>
@@ -433,6 +445,24 @@
           </ul>
         </div>
 
+        <div class="marque">
+          <div class="marque-logo">
+            <img src="assets/images/house-of-peau-logo.webp" alt="House of Peau" class="marque-logo-img">
+          </div>
+          <div class="marque-tag">Visage &amp; corps · Soin holistique</div>
+          <h3>House of Peau</h3>
+          <p>
+            Une approche moderne et holistique du soin de la peau. Des protocoles innovants,
+            alliant techniques avancées et gestuelles précises, pour une expérience sur-mesure
+            entre performance et lâcher-prise.
+          </p>
+          <ul>
+            <li>Approche holistique</li>
+            <li>Protocoles innovants</li>
+            <li>Sur-mesure sensoriel</li>
+          </ul>
+        </div>
+
       </div>
     </div>
   </section>
@@ -441,7 +471,7 @@
   <section class="lieu" id="lieu">
     <div class="lieu-head">
       <span class="eyebrow">— Le lieu</span>
-      <h2>Une <span class="i">maison</span> à Woippy.</h2>
+      <h2>Une maison à Woippy,<br>aux portes de <span class="i">Metz.</span></h2>
     </div>
     <div class="lieu-grid">
       <figure class="f1">
@@ -476,10 +506,10 @@
       <div class="rdv-left">
         <span class="eyebrow">— Réserver</span>
         <h2>Prendre un<br><span class="i">rendez-vous</span>.</h2>
-        <p>Offrez-vous un temps suspendu. Nous répondons à chaque demande dans la journée.</p>
+        <p>Offrez-vous un temps suspendu dans notre institut de beauté à Woippy, à deux pas de Metz. Nous répondons à chaque demande dans la journée.</p>
         <div class="rdv-coords">
           <div class="rdv-coord"><span>Adresse</span>
-            <p>Woippy · 57140<br>Moselle, France</p>
+            <p>Woippy · 57140<br>Moselle, France<br>5 min de Metz centre</p>
           </div>
           <div class="rdv-coord"><span>Horaires</span>
             <p>Lundi — Samedi · 9h à 18h<br>Sur rendez-vous</p>
@@ -508,7 +538,7 @@
             <circle cx="100" cy="100" r="96" fill="url(#rdv-badge-fill)" />
             <circle cx="100" cy="100" r="93.5" fill="none" stroke="#B8874E" stroke-width=".5" opacity=".75" />
             <g>
-              <text font-family="Italiana, serif" font-size="13.5" fill="#F0E3CD" letter-spacing="3">
+              <text font-family="Cormorant Garamond, serif" font-size="13.5" fill="#F0E3CD" letter-spacing="3">
                 <textPath href="#rdv-badge-ring" startOffset="0">TERRE SEREINE · MAISON DE BIEN-ÊTRE · WOIPPY ·
                 </textPath>
               </text>
@@ -540,6 +570,7 @@
         <ul>
           <li><a href="services/headspa.html">Head Spa</a></li>
           <li><a href="services/hydra-face.html">Hydra Face</a></li>
+          <li><a href="services/nanoneedling.html">Nanoneedling</a></li>
           <li><a href="services/maderotherapie.html">Maderothérapie</a></li>
           <li><a href="services/drainage-lymphatique.html">Drainage lymphatique</a></li>
           <li><a href="services/sauna-dome.html">Sauna dôme</a></li>

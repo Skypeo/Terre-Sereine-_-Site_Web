@@ -4,7 +4,23 @@
       "Bash(ffmpeg -version)",
       "Bash(ffmpeg -hide_banner -encoders)",
       "Bash(awk '{sum+=$5; print $5\"\\\\t\"$9} END {printf \"\\\\nTotal HTML: %d bytes \\(%.1f KB\\)\\\\n\", sum, sum/1024}')",
-      "Bash(ffmpeg -y -i \"assets/images/newBG \\(2\\).jpg\" -c:v libwebp -quality 80 -compression_level 6 -preset photo -vf \"scale='min\\(1600,iw\\)':-2\" \"assets/images/hero-soin-mains.webp\")"
+      "Bash(ffmpeg -y -i \"assets/images/newBG \\(2\\).jpg\" -c:v libwebp -quality 80 -compression_level 6 -preset photo -vf \"scale='min\\(1600,iw\\)':-2\" \"assets/images/hero-soin-mains.webp\")",
+      "Bash(curl -s -o /dev/null -w \"accueil: %{http_code}\\\\n\" http://127.0.0.1:8765/)",
+      "Bash(curl -s -o /dev/null -w \"nanoneedling: %{http_code}\\\\n\" http://127.0.0.1:8765/services/nanoneedling.html)",
+      "Bash(curl -s -o /dev/null -w \"services: %{http_code}\\\\n\" http://127.0.0.1:8765/services.html)",
+      "Bash(curl -s -o /dev/null -w \"a-propos: %{http_code}\\\\n\" http://127.0.0.1:8765/a-propos.html)",
+      "Bash(curl -s -o /dev/null -w \"house-of-peau-logo: %{http_code}\\\\n\" http://127.0.0.1:8765/assets/images/house-of-peau-logo.webp)",
+      "Bash(npx *)",
+      "Bash(curl -sL -o /dev/null -w \"nanoneedling: %{http_code}\\\\n\" http://127.0.0.1:8765/services/nanoneedling.html)",
+      "Bash(curl -sL -o /dev/null -w \"services: %{http_code}\\\\n\" http://127.0.0.1:8765/services.html)",
+      "Bash(curl -sL -o /dev/null -w \"a-propos: %{http_code}\\\\n\" http://127.0.0.1:8765/a-propos.html)",
+      "mcp__puppeteer__puppeteer_navigate",
+      "mcp__puppeteer__puppeteer_screenshot",
+      "Bash(curl -sL http://127.0.0.1:8765/services/nanoneedling.html)",
+      "mcp__puppeteer__puppeteer_evaluate",
+      "WebFetch(domain:api.anthropic.com)",
+      "Bash(mkdir -p /tmp/terre-handoff)",
+      "Bash(unzip -o \"/c/Users/monke/Dropbox/Mon PC \\(LAPTOP-S0HITGG5\\)/Downloads/Terre sereine-handoff.zip\")"
     ]
   }
 }

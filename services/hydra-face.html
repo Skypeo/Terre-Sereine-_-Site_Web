@@ -23,7 +23,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Fraunces:ital,wght@0,300..700;1,300..700&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/styles.css">
 
   <script type="application/ld+json">
@@ -51,7 +51,15 @@
   </script>
 </head>
 
-<body>
+<body class="is-loading">
+
+  <!-- Loader (premier chargement) -->
+  <div class="site-loader" id="siteLoader" role="status" aria-label="Chargement de Terre Sereine">
+    <div class="site-loader-col">
+      <div class="site-loader-rond"><img src="../assets/loader/logo-round-feathered.png" alt="" width="220" height="220"></div>
+      <div class="site-loader-text"><img src="../assets/loader/logo-text-feathered.png" alt="Terre Sereine — Maison de Bien-être &amp; de Beauté"></div>
+    </div>
+  </div>
 
   <header class="header" id="header">
     <a href="/" class="brand" aria-label="Terre Sereine — Accueil">
@@ -67,6 +75,7 @@
         <div class="submenu" role="menu" aria-label="Nos services">
           <a href="headspa.html" role="menuitem">Head <em>Spa</em></a>
           <a href="hydra-face.html" role="menuitem">Hydra <em>Face</em></a>
+          <a href="nanoneedling.html" role="menuitem">Nano<em>needling</em></a>
           <a href="maderotherapie.html" role="menuitem">Madero<em>thérapie</em></a>
           <a href="drainage-lymphatique.html" role="menuitem">Drainage <em>lymphatique</em></a>
           <a href="sauna-dome.html" role="menuitem">Sauna <em>Dôme</em></a>
@@ -114,6 +123,7 @@
           <ul class="mobile-sublist" id="mobile-services-sublist">
             <li><a href="headspa.html">Head Spa</a></li>
             <li><a href="hydra-face.html">Hydra Face</a></li>
+            <li><a href="nanoneedling.html">Nanoneedling</a></li>
             <li><a href="maderotherapie.html">Maderothérapie</a></li>
             <li><a href="drainage-lymphatique.html">Drainage lymphatique</a></li>
             <li><a href="sauna-dome.html">Sauna dôme</a></li>
@@ -154,9 +164,9 @@
 
   <header class="page-header" data-watermark="VISAGE · VISAGE · VISAGE · VISAGE · ">
     <div class="page-header-inner">
-      <span class="eyebrow">— Soin visage Dermalogica</span>
+      <span class="eyebrow">— Soin nouvelle génération</span>
       <h1>Hydra <span class="i">Face.</span></h1>
-      <p class="lede">Le protocole signature Dermalogica, adapté à votre peau, pour un éclat immédiat et durable.</p>
+      <p class="lede">Le soin nouvelle génération pour une peau parfaite. Un teint frais, lumineux et éclatant dès la première séance.</p>
     </div>
   </header>
 
@@ -178,10 +188,11 @@
           <span>Dermalogica</span>
         </div>
         <h1>Hydra <span class="i">Face</span></h1>
-        <p class="lede">Une référence mondiale du soin clinique du visage, déclinée en cabine, calibrée à votre peau du jour. L'Hydra Face réunit diagnostic, technique et sensorialité.</p>
+        <p class="lede">Le soin Hydraface est une technologie avancée de nettoyage et d'hydratation de la peau, idéale pour retrouver un teint frais, lumineux et éclatant dès la première séance.</p>
 
         <div class="prose">
-          <p>Chez Terre Sereine, nous avons fait le choix de Dermalogica pour la rigueur de leurs formules : actifs cliniquement validés, propres, sans parabens, sans parfums artificiels, sans colorants. Le soin Hydra Face en est l'expression la plus aboutie — un protocole en cinq temps qui s'adapte à toutes les peaux.</p>
+          <p>En cabine, ce protocole complet associe nettoyage en profondeur, exfoliation douce, extraction des impuretés et infusion d'actifs hydratants et revitalisants. Adapté à tous les types de peau, le soin Hydraface cible efficacement les imperfections, les pores dilatés, le teint terne ou encore les signes de déshydratation.</p>
+          <p>Véritable coup d'éclat immédiat, il offre une peau plus nette, plus lisse et intensément hydratée, sans éviction sociale. Un incontournable pour sublimer votre peau en douceur.</p>
         </div>
 
         <ol class="service-bullets">
@@ -249,6 +260,7 @@
         <ul>
           <li><a href="headspa.html">Head Spa</a></li>
           <li><a href="hydra-face.html">Hydra Face</a></li>
+          <li><a href="nanoneedling.html">Nanoneedling</a></li>
           <li><a href="maderotherapie.html">Maderothérapie</a></li>
           <li><a href="drainage-lymphatique.html">Drainage lymphatique</a></li>
           <li><a href="sauna-dome.html">Sauna dôme</a></li>

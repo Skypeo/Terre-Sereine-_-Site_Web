@@ -4,6 +4,27 @@
 (function () {
   'use strict';
 
+  // === LOADER : fade out au chargement (s'affiche sur chaque page) ===
+  const loader = document.getElementById('siteLoader');
+  if (loader) {
+    const minDuration = 300;
+    const start = performance.now();
+    const hide = () => {
+      const elapsed = performance.now() - start;
+      const wait = Math.max(0, minDuration - elapsed);
+      setTimeout(() => {
+        loader.classList.add('is-hidden');
+        document.body.classList.remove('is-loading');
+        loader.addEventListener('transitionend', () => loader.remove(), { once: true });
+      }, wait);
+    };
+    if (document.readyState === 'complete') {
+      hide();
+    } else {
+      window.addEventListener('load', hide, { once: true });
+    }
+  }
+
   const header = document.getElementById('header');
   const burger = document.getElementById('burger');
   const mobileMenu = document.getElementById('mobileMenu');

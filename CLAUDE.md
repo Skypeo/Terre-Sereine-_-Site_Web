@@ -5,21 +5,22 @@ Site vitrine multi-pages pour un institut de beauté **en création** à Woippy 
 
 Issu d'une maquette one-page validée par le client (commit `4a1fb92`), désormais éclaté en site classique avec pages Services, À propos, Galerie, Contact.
 
-## Services proposés (6 rituels)
+## Services proposés (7 rituels)
 - **Headspa** (rituel capillaire japonais) → `/services/headspa.html`
 - **Hydra Face** (soin visage Dermalogica) → `/services/hydra-face.html`
+- **Nanoneedling** (soin visage éclat, micro-pointes) → `/services/nanoneedling.html` _(photo en attente, placeholder CSS en place)_
 - **Maderothérapie** (soin corps Bioslimming) → `/services/maderotherapie.html`
 - **Drainage lymphatique** → `/services/drainage-lymphatique.html`
 - **Sauna dôme infrarouge** → `/services/sauna-dome.html`
 - **Massage pierres chaudes** → `/services/pierres-chaudes.html`
 
-## Marques partenaires
+## Marques partenaires (3 maisons)
 - **Dermalogica** (visage) — wordmark typographique caps letterspacé
-- **Bioslimming** (corps) — wordmark Fraunces italic
-- _(Note : photos clientes mentionnent aussi "House of Peau" — non intégrée comme marque officielle, à confirmer avec le client)_
+- **Bioslimming** (corps) — wordmark Cormorant Garamond italic
+- **House of Peau** (visage & corps, soin holistique) — logo image (`assets/images/house-of-peau-logo.webp`) — confirmé par le client le 2026-04-30
 
 ## Stack
-HTML5 statique multipages + CSS externe + JS vanilla. Google Fonts (Italiana, Fraunces, Manrope). Photos WebP locales + Unsplash.
+HTML5 statique multipages + CSS externe + JS vanilla. Google Fonts (Cormorant Garamond + Manrope, 2 polices uniquement). Photos WebP locales + Unsplash.
 
 **Pas de framework, pas de build step.** Le site est servable tel quel par n'importe quel hébergeur statique.
 
@@ -31,7 +32,7 @@ Palette extraite du logo client :
 - Or `#B8874E` · Or profond `#9A6E38` · Brun `#6E4A2F`
 - Terracotta `#C47B5A` · Encre `#2B1F16`
 
-Typos : Italiana (titres), Fraunces italic (accents), Manrope (corps).
+Typos : Cormorant Garamond (titres + accents italiques), Manrope (corps). Deux polices, point.
 
 ## Élément signature
 **Agate scroll-liée** : bouton de retour-en-haut en bas-droite avec anneaux concentriques qui s'allument progressivement au fur et à mesure du scroll.
@@ -46,6 +47,7 @@ Terre-Sereine/
 ├── services/
 │   ├── headspa.html
 │   ├── hydra-face.html
+│   ├── nanoneedling.html
 │   ├── maderotherapie.html
 │   ├── drainage-lymphatique.html
 │   ├── sauna-dome.html
@@ -68,7 +70,7 @@ Terre-Sereine/
         ├── dermalogica-soin-visage.webp
         ├── massage-pierres-chaudes.webp
         ├── sauna-dome-infrarouge.webp
-        └── _house-of-peau-logo.webp  # préfixée _ car non utilisée
+        └── house-of-peau-logo.webp  # logo 3e marque partenaire
 ```
 
 ## Conventions
@@ -97,8 +99,12 @@ Terre-Sereine/
 13. **Sous-menu Services** :
     - **Desktop / tablette** : dropdown ivoire blur au hover/focus de "Services", caret SVG qui pivote, pont invisible (`::before`) pour stabiliser le hover.
     - **Mobile** : sous-liste **fermée par défaut**, dépliée par un bouton rond avec caret à droite de "Services". Lien "Services" lui-même reste cliquable vers la page liste.
-14. **Menu overlay mobile éditorial** : background gradient 165°, watermark géant "SEREINE" en Italiana, brand en haut (logo + nom), navigation numérotée 01-05 avec trait doré au hover, bloc coordonnées (tel/email/horaires), CTA "Prendre rendez-vous" pleine largeur, socials en bas. Apparition en cascade des 5 sections (delay 80ms).
+14. **Menu overlay mobile éditorial** : background gradient 165°, watermark géant "SEREINE" en Cormorant Garamond, brand en haut (logo + nom), navigation numérotée 01-05 avec trait doré au hover, bloc coordonnées (tel/email/horaires), CTA "Prendre rendez-vous" pleine largeur, socials en bas. Apparition en cascade des 5 sections (delay 80ms).
 15. **Watermark animé sur les page-header** : reprend l'animation `heroGlide` du hero (translation horizontale infinie, 46s linear). Mot répété 4× avec `·` dans `data-watermark` pour garantir une boucle invisible.
+16. **Ajout 7e service Nanoneedling** (2026-04-30) : technique innovante non invasive de micro-pointes, soin visage éclat. Texte fourni par Claudia. Pas de photo client → placeholder CSS (`.photo-placeholder` + variante `.photo-placeholder-sm`) en attendant. Page complète sur le modèle de Hydra Face.
+17. **Passage à 3 marques partenaires** (2026-04-30) : House of Peau (initialement en attente) confirmée par Claudia. Layout `marques-grid` passe de 2 à 3 colonnes via classe additive `.marques-grid-3` (responsive 3 → 2 → 1 col à 1100px et 720px). Logo image (vs wordmark texte) intégré via classe `.marque-logo-img`.
+18. **Texte Dermalogica & Hydra Face mis au ton Claudia** (2026-04-30) : approche plus orientée "expérience cabine + routine maison" plutôt que "histoire de la marque".
+19. **Section maison a-propos réécrite** (2026-04-30) : nouveau texte "Histoire de passion, de peau et d'équilibre" fourni par Claudia. Eyebrow passe de "— Philosophie" à "— Notre histoire". Tagline italique en bas du bloc maison via classe `.maison-tagline`.
 
 ## Animations CSS partagées
 - `heroGlide` (46s linear infinite) : utilisé par `.hero::before` ET `.page-header::before`

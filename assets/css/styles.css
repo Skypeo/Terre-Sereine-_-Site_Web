@@ -67,19 +67,19 @@ a {
 
 /* === TYPO === */
 .serif {
-  font-family: 'Italiana', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-weight: 400;
   letter-spacing: .01em
 }
 
 .frau {
-  font-family: 'Fraunces', serif
+  font-family: 'Cormorant Garamond', serif
 }
 
 h1,
 h2,
 h3 {
-  font-family: 'Italiana', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-weight: 400;
   line-height: 1.05;
   color: var(--brown)
@@ -284,12 +284,9 @@ h3 {
 }
 
 .submenu a em {
-  font-family: 'Fraunces', serif;
-  font-style: italic;
-  font-weight: 400;
-  color: var(--gold-deep);
-  margin-left: 5px;
-  text-transform: none;
+  font: inherit;
+  color: inherit;
+  margin-left: 4px;
   letter-spacing: 0;
   font-size: 13px;
   transition: color .25s var(--ease);
@@ -298,10 +295,6 @@ h3 {
 .submenu a:hover {
   color: var(--gold-deep);
   background: rgba(184, 135, 78, .1);
-}
-
-.submenu a:hover em {
-  color: var(--terracotta);
 }
 
 /* Focus clavier visible pour l'accessibilité */
@@ -334,7 +327,7 @@ h3 {
 }
 
 .nav-hours strong {
-  font-family: 'Italiana', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-weight: 400;
   font-size: 13px;
   letter-spacing: .06em;
@@ -440,7 +433,10 @@ h3 {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 24px;
+  padding: 12px;
+  overflow: hidden;
+  overscroll-behavior: contain;
+  touch-action: pan-x;
   opacity: 0;
   visibility: hidden;
   overflow-y: auto;
@@ -459,7 +455,7 @@ h3 {
   bottom: -28px;
   left: 50%;
   transform: translateX(-50%);
-  font-family: 'Italiana', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: clamp(160px, 44vw, 360px);
   line-height: .82;
   color: rgba(110, 74, 47, .065);
@@ -478,24 +474,27 @@ h3 {
   align-items: stretch;
   width: 100%;
   max-width: 440px;
+  height: 100%;
+  max-height: 100vh;
   margin: 0 auto;
-  padding: 80px 6px 40px;
+  padding: 44px 6px 12px;
   gap: 0;
+  overflow: hidden;
 }
 
 /* === Brand en haut du menu === */
 .mobile-brand {
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding-bottom: 26px;
-  margin-bottom: 28px;
+  gap: 12px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
   border-bottom: 1px solid rgba(110, 74, 47, .18);
 }
 
 .mobile-brand img {
-  width: 54px;
-  height: 54px;
+  width: 36px;
+  height: 36px;
   object-fit: contain;
   flex-shrink: 0;
 }
@@ -512,8 +511,8 @@ h3 {
 }
 
 .mobile-brand-name {
-  font-family: 'Italiana', serif;
-  font-size: 22px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
   color: var(--brown);
   line-height: 1;
   letter-spacing: .02em;
@@ -522,15 +521,15 @@ h3 {
 /* === Eyebrow de section === */
 .mobile-nav-eyebrow {
   font-family: 'Manrope', sans-serif;
-  font-size: 10px;
-  letter-spacing: .32em;
+  font-size: 9px;
+  letter-spacing: .3em;
   text-transform: uppercase;
   color: var(--gold-deep);
   font-weight: 500;
   display: flex;
   align-items: center;
-  gap: 14px;
-  margin-bottom: 18px;
+  gap: 12px;
+  margin-bottom: 8px;
   padding: 0 4px;
 }
 
@@ -545,19 +544,19 @@ h3 {
 .mobile-nav {
   display: flex;
   flex-direction: column;
-  margin-bottom: 36px;
+  margin-bottom: 12px;
 }
 
 .mobile-link {
-  font-family: 'Italiana', serif;
-  font-size: clamp(26px, 6.6vw, 34px);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(18px, 4.6vw, 22px);
   color: var(--brown);
   letter-spacing: .01em;
   line-height: 1.05;
   display: flex;
   align-items: baseline;
-  gap: 18px;
-  padding: 14px 4px 14px 6px;
+  gap: 12px;
+  padding: 6px 4px;
   border-bottom: 1px solid rgba(110, 74, 47, .12);
   position: relative;
   transition: color .25s var(--ease), padding-left .3s var(--ease);
@@ -586,15 +585,15 @@ h3 {
 }
 
 .mobile-num {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 11px;
   color: var(--gold-deep);
   letter-spacing: 0;
   line-height: 1;
   flex-shrink: 0;
-  width: 22px;
+  width: 18px;
   text-align: left;
   transform: translateY(-3px);
 }
@@ -620,8 +619,8 @@ h3 {
 }
 
 .mobile-section-toggle {
-  width: 34px;
-  height: 34px;
+  width: 28px;
+  height: 28px;
   border: 1px solid rgba(110, 74, 47, .28);
   background: transparent;
   border-radius: 50%;
@@ -656,9 +655,9 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 10px;
+  gap: 4px;
   margin: 0;
-  padding: 0 0 0 30px;
+  padding: 0 0 0 24px;
   width: 100%;
   max-height: 0;
   opacity: 0;
@@ -670,7 +669,7 @@ h3 {
 .mobile-sublist.is-open {
   max-height: 520px;
   opacity: 1;
-  padding: 16px 0 16px 30px;
+  padding: 8px 0 8px 24px;
   border-bottom-color: rgba(110, 74, 47, .12);
 }
 
@@ -679,14 +678,14 @@ h3 {
 }
 
 .mobile-sublist a {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 14px;
   color: var(--gold-deep);
   letter-spacing: .02em;
   border-bottom: 1px solid transparent;
-  padding: 3px 0 2px;
+  padding: 2px 0;
   display: inline-block;
   transition: color .25s var(--ease), border-color .25s var(--ease);
 }
@@ -700,15 +699,15 @@ h3 {
 .mobile-meta {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-bottom: 30px;
+  gap: 3px;
+  margin-bottom: 10px;
   padding: 0 4px;
 }
 
 .mobile-meta-link {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  font-size: 17px;
+  font-size: 14px;
   color: var(--brown);
   border-bottom: 1px solid var(--gold);
   align-self: flex-start;
@@ -722,11 +721,11 @@ h3 {
 
 .mobile-meta-text {
   font-family: 'Manrope', sans-serif;
-  font-size: 11px;
+  font-size: 9px;
   letter-spacing: .22em;
   text-transform: uppercase;
   color: rgba(110, 74, 47, .8);
-  margin-top: 4px;
+  margin-top: 2px;
 }
 
 /* === CTA === */
@@ -735,11 +734,11 @@ h3 {
   align-items: center;
   justify-content: space-between;
   gap: 14px;
-  padding: 18px 26px;
+  padding: 10px 20px;
   background: var(--ink);
   color: var(--cream);
   border-radius: var(--r-pill);
-  font-size: 12px;
+  font-size: 10px;
   letter-spacing: .22em;
   text-transform: uppercase;
   margin-bottom: 26px;
@@ -770,9 +769,10 @@ h3 {
   align-items: center;
   justify-content: center;
   gap: 14px;
-  font-size: 10px;
+  font-size: 9px;
   letter-spacing: .28em;
   text-transform: uppercase;
+  margin-top: 8px;
   color: rgba(110, 74, 47, .55);
 }
 
@@ -850,8 +850,9 @@ h3 {
   overflow: hidden;
   isolation: isolate;
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 72px;
+  grid-template-columns: minmax(auto, 620px) minmax(auto, 460px);
+  justify-content: center;
+  gap: 56px;
   align-items: center;
 }
 
@@ -860,7 +861,7 @@ h3 {
   position: absolute;
   bottom: 40px;
   left: -14px;
-  font-family: 'Italiana', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: clamp(160px, 22vw, 320px);
   line-height: .82;
   color: rgba(110, 74, 47, .06);
@@ -911,7 +912,7 @@ h3 {
 }
 
 .hero-meta .chapter {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-weight: 400;
   color: var(--gold-deep);
@@ -936,16 +937,14 @@ h3 {
 }
 
 .hero-title .i {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-weight: 300;
   color: var(--gold-deep);
-  display: block;
-  margin-top: .04em;
 }
 
 .hero-lede {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-weight: 300;
   font-style: italic;
   font-size: 20px;
@@ -1005,7 +1004,7 @@ h3 {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-weight: 400;
   font-size: 16px;
@@ -1156,7 +1155,7 @@ h3 {
 }
 
 .hero-badge strong {
-  font-family: 'Italiana', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 20px;
   font-weight: 400;
   letter-spacing: .03em;
@@ -1166,7 +1165,7 @@ h3 {
 }
 
 .hero-badge p {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-weight: 300;
   font-size: 13px;
@@ -1356,14 +1355,14 @@ h3 {
 }
 
 .maison h2 .i {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-weight: 300;
   color: var(--terracotta)
 }
 
 .maison-lede {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-weight: 300;
   font-size: 22px;
   line-height: 1.5;
@@ -1387,7 +1386,7 @@ h3 {
   display: flex;
   align-items: center;
   gap: 14px;
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   color: var(--gold-deep);
   font-size: 15px;
@@ -1456,14 +1455,14 @@ h3 {
 }
 
 .rituels-head h2 .i {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   color: var(--terracotta);
   font-weight: 300
 }
 
 .rituels-intro {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-weight: 300;
   font-size: 17px;
   line-height: 1.6;
@@ -1475,8 +1474,9 @@ h3 {
   max-width: 1240px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px 28px
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-flow: dense;
+  gap: 28px;
 }
 
 .rituel {
@@ -1488,6 +1488,51 @@ h3 {
   isolation: isolate;
   overflow: hidden;
   border: 1px solid rgba(110, 74, 47, .08);
+  grid-column: span 4;
+}
+
+/* Variante horizontale : photo à gauche, contenu à droite */
+.rituel--wide {
+  grid-column: span 6;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  align-items: center;
+  gap: 0 28px;
+  padding: 28px 32px;
+}
+
+.rituel--wide .rituel-photo {
+  width: 140px;
+  height: 140px;
+  margin-bottom: 0;
+  align-self: center;
+}
+
+.rituel--wide .rituel-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.rituel--wide h3 {
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+
+.rituel--wide .rituel-num {
+  margin-bottom: 10px;
+}
+
+.rituel--wide .rituel-duration {
+  margin-bottom: 8px;
+}
+
+.rituel--wide p {
+  margin-bottom: 0;
+}
+
+.rituel--wide .rituel-cta {
+  margin-top: 18px;
+  padding-top: 14px;
 }
 
 a.rituel { color: inherit; }
@@ -1498,7 +1543,7 @@ a.rituel { color: inherit; }
 }
 
 .rituel-num {
-  font-family: 'Italiana', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 13px;
   letter-spacing: .3em;
   color: var(--gold-deep);
@@ -1544,7 +1589,7 @@ a.rituel { color: inherit; }
 }
 
 .rituel h3 .i {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-weight: 300;
   color: var(--terracotta)
@@ -1561,7 +1606,42 @@ a.rituel { color: inherit; }
 .rituel p {
   font-size: 14px;
   line-height: 1.65;
-  color: var(--ink)
+  color: var(--ink);
+}
+
+/* CTA explicite « Découvrir » en pied de card */
+.rituel-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 26px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(154, 110, 56, .22);
+  font-family: 'Manrope', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  transition: color .3s var(--ease), border-color .3s var(--ease);
+}
+
+.rituel-cta .cta-arrow {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  letter-spacing: 0;
+  font-weight: 300;
+  transition: transform .35s var(--ease);
+}
+
+.rituel:hover .rituel-cta {
+  color: var(--brown);
+  border-color: rgba(154, 110, 56, .55);
+}
+
+.rituel:hover .rituel-cta .cta-arrow {
+  transform: translateX(8px);
 }
 
 .rituel-arrow {
@@ -1635,7 +1715,7 @@ a.rituel { color: inherit; }
 }
 
 .marques h2 .i {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   color: var(--terracotta);
   font-weight: 300
@@ -1689,7 +1769,7 @@ a.rituel { color: inherit; }
 }
 
 .wordmark-italic {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-weight: 400;
   letter-spacing: 0;
@@ -1707,7 +1787,7 @@ a.rituel { color: inherit; }
 }
 
 .marque h3 {
-  font-family: 'Italiana', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 32px;
   color: var(--cream);
   margin-bottom: 16px
@@ -1758,7 +1838,7 @@ a.rituel { color: inherit; }
 }
 
 .lieu h2 .i {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   color: var(--terracotta);
   font-weight: 300
@@ -1797,7 +1877,7 @@ a.rituel { color: inherit; }
   right: 16px;
   z-index: 3;
   color: var(--cream);
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-size: 14px;
   text-shadow: 0 2px 10px rgba(0, 0, 0, .5);
@@ -1858,14 +1938,14 @@ a.rituel { color: inherit; }
 }
 
 .rdv-left h2 .i {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   color: var(--terracotta);
   font-weight: 300
 }
 
 .rdv-left p {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-weight: 300;
   font-size: 19px;
   line-height: 1.55;
@@ -2037,13 +2117,13 @@ a.rituel { color: inherit; }
 }
 
 .footer-brand h4 {
-  font-family: 'Italiana', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 28px;
   color: var(--cream)
 }
 
 .footer-brand p {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-weight: 300;
   font-size: 15px;
@@ -2118,7 +2198,7 @@ a.rituel { color: inherit; }
   position: absolute;
   bottom: -20px;
   left: -14px;
-  font-family: 'Italiana', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: clamp(140px, 18vw, 260px);
   line-height: .82;
   color: rgba(110, 74, 47, .055);
@@ -2157,14 +2237,14 @@ a.rituel { color: inherit; }
 }
 
 .page-header h1 .i {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-weight: 300;
   color: var(--terracotta);
 }
 
 .page-header .lede {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-weight: 300;
   font-size: clamp(17px, 1.6vw, 22px);
@@ -2252,7 +2332,7 @@ a.rituel { color: inherit; }
 }
 
 .section-title .i {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   color: var(--terracotta);
   font-weight: 300;
@@ -2292,7 +2372,7 @@ a.rituel { color: inherit; }
 }
 
 .prose .frau-i {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   color: var(--gold-deep);
 }
@@ -2361,14 +2441,14 @@ a.rituel { color: inherit; }
 }
 
 .service-detail h1 .i {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   color: var(--terracotta);
   font-weight: 300;
 }
 
 .service-detail .lede {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-weight: 300;
   font-size: 22px;
@@ -2401,7 +2481,7 @@ a.rituel { color: inherit; }
 }
 
 .service-bullets .num {
-  font-family: 'Italiana', serif;
+  font-family: 'Cormorant Garamond', serif;
   color: var(--gold-deep);
   font-size: 14px;
   letter-spacing: .12em;
@@ -2439,13 +2519,13 @@ a.rituel { color: inherit; }
 }
 
 .service-info dd {
-  font-family: 'Italiana', serif;
+  font-family: 'Cormorant Garamond', serif;
   color: var(--brown);
   font-size: 18px;
 }
 
 .service-info dd .frau {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   color: var(--terracotta);
   font-size: 16px;
@@ -2469,7 +2549,7 @@ a.rituel { color: inherit; }
 }
 
 .related-services h2 .i {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   color: var(--terracotta);
   font-weight: 300;
@@ -2522,14 +2602,14 @@ a.rituel { color: inherit; }
 }
 
 .related-card .name {
-  font-family: 'Italiana', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 18px;
   color: var(--brown);
   line-height: 1.1;
 }
 
 .related-card .name .i {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   color: var(--terracotta);
 }
@@ -2621,7 +2701,7 @@ a.rituel { color: inherit; }
   right: 18px;
   z-index: 3;
   color: var(--cream);
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-size: 14px;
   text-shadow: 0 2px 10px rgba(0, 0, 0, .5);
@@ -2681,14 +2761,14 @@ a.rituel { color: inherit; }
 }
 
 .contact-form h2 .i {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   color: var(--terracotta);
   font-weight: 300;
 }
 
 .contact-form-sub {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-size: 15px;
   color: var(--brown);
@@ -2821,14 +2901,14 @@ a.rituel { color: inherit; }
 }
 
 .contact-aside h2 .i {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   color: var(--terracotta);
   font-weight: 300;
 }
 
 .contact-aside-lede {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-size: 17px;
   color: var(--brown);
@@ -2912,7 +2992,7 @@ a.rituel { color: inherit; }
 }
 
 .legal-inner h3 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-weight: 400;
   font-size: 19px;
@@ -2958,6 +3038,32 @@ a.rituel { color: inherit; }
 @media(max-width:1100px) {
   .rituels-grid {
     grid-template-columns: repeat(2, 1fr)
+  }
+
+  .rituel,
+  .rituel--wide {
+    grid-column: span 1
+  }
+
+  /* Sur tablette, les wide repassent en vertical comme les normales */
+  .rituel--wide {
+    display: block;
+    padding: 36px 32px 40px
+  }
+
+  .rituel--wide .rituel-photo {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 26px
+  }
+
+  .rituel--wide h3 {
+    font-size: 28px
+  }
+
+  .rituel--wide .rituel-cta {
+    margin-top: 26px;
+    padding-top: 18px
   }
 
   .marques-grid {
@@ -3304,4 +3410,201 @@ a.rituel { color: inherit; }
   .legal {
     padding: 30px 22px 80px;
   }
+}
+
+/* ====================================================== */
+/* === Ajouts : 3e marque House of Peau + Nanoneedling === */
+/* ====================================================== */
+
+/* Grille marques en 3 colonnes (au lieu de 2) */
+.marques-grid.marques-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+@media (max-width: 1100px) {
+  .marques-grid.marques-grid-3 {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 720px) {
+  .marques-grid.marques-grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Cards marque légèrement plus compactes en mode 3 colonnes */
+.marques-grid.marques-grid-3 .marque {
+  padding: 40px 32px;
+}
+
+.marques-grid.marques-grid-3 .marque h3 {
+  font-size: 30px;
+}
+
+/* Logo image (House of Peau) — même hauteur visuelle que les wordmarks */
+.marque-logo-img {
+  display: block;
+  height: 36px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+  filter: brightness(1.05) contrast(1.05);
+}
+
+/* Placeholder photo (services en attente d'image client) */
+.photo-placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background:
+    linear-gradient(135deg, rgba(184, 135, 78, .08), rgba(196, 123, 90, .06)),
+    radial-gradient(circle at 30% 20%, rgba(240, 227, 205, .5), transparent 60%),
+    var(--ivory);
+  border: 1px dashed rgba(154, 110, 56, .35);
+  border-radius: var(--r-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--brown);
+  text-align: center;
+  padding: 24px;
+}
+
+.photo-placeholder-eyebrow {
+  font-family: 'Manrope', sans-serif;
+  font-size: 10px;
+  letter-spacing: .32em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  opacity: .7;
+}
+
+.photo-placeholder-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 3vw, 42px);
+  color: var(--brown);
+  line-height: 1;
+}
+
+.photo-placeholder-title em {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--terracotta);
+}
+
+.photo-placeholder-note {
+  font-family: 'Manrope', sans-serif;
+  font-size: 11px;
+  color: var(--ink);
+  opacity: .5;
+}
+
+/* Variante compacte pour les cards .rituel (grille services) */
+.photo-placeholder-sm {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 50% 30% 50% 40% / 40% 50% 30% 50%;
+  padding: 12px;
+  border: 1px dashed rgba(154, 110, 56, .3);
+}
+
+.photo-placeholder-sm .photo-placeholder-title {
+  font-size: 22px;
+}
+
+/* Tagline finale du bloc maison (a-propos) */
+.maison-tagline {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(154, 110, 56, .25);
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 18px;
+  color: var(--gold-deep);
+  letter-spacing: .01em;
+}
+
+/* ====================================================== */
+/* === LOADER : premier chargement ====================== */
+/* ====================================================== */
+
+.site-loader {
+  position: fixed;
+  inset: 0;
+  background: #F8E6D0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  transition: opacity .55s ease;
+}
+
+.site-loader.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.site-loader-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 460px;
+  max-width: 80%;
+}
+
+.site-loader-rond {
+  width: 220px;
+  height: 220px;
+}
+
+.site-loader-rond img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  animation: site-loader-spin 6s linear infinite;
+  pointer-events: none;
+  user-select: none;
+}
+
+@keyframes site-loader-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.site-loader-text {
+  width: 100%;
+  margin-top: -16px;
+}
+
+.site-loader-text img {
+  width: 100%;
+  height: auto;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (max-width: 720px) {
+  .site-loader-rond {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-loader-rond img {
+    animation: none;
+  }
+}
+
+/* Empêcher le scroll pendant l'affichage du loader */
+body.is-loading {
+  overflow: hidden;
 }
