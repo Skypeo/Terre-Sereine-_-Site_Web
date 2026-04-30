@@ -3316,7 +3316,19 @@ a.rituel {
   }
 
   .hero-meta {
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .hero-meta .rule {
+    width: 40px;
+  }
+
+  .hero-meta .label {
+    font-size: 9px;
+    letter-spacing: 0.22em;
   }
 
   .hero-lede {
