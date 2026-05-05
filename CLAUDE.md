@@ -5,10 +5,12 @@ Site vitrine multi-pages pour un institut de beauté **en création** à Woippy 
 
 Issu d'une maquette one-page validée par le client (commit `4a1fb92`), désormais éclaté en site classique avec pages Services, À propos, Galerie, Contact.
 
-## Services proposés (8 rituels)
+## Services proposés (10 rituels)
 - **Headspa** (rituel capillaire japonais) → `/services/headspa.html`
-- **Hydra Face** (soin visage Dermalogica) → `/services/hydra-face.html`
+- **Hydra Face** (soin visage technologie hydrofacial Dermalogica) → `/services/hydra-face.html`
 - **Nanoneedling** (soin visage éclat, micro-pointes) → `/services/nanoneedling.html`
+- **Dermalogica** (soins visage manuels : Signature 30 min/1 h, Pro Bright/Calm/Clear/Firm) → `/services/dermalogica.html` _(photos en attente, placeholders CSS en place)_
+- **House of Peau** (soins visage holistiques : Lift Elixir, Hydra Boost, Acné Solution, Sébum Control, Sensitive Skin) → `/services/house-of-peau.html` _(photos en attente, placeholders CSS en place)_
 - **Maderothérapie** (soin corps Bioslimming) → `/services/maderotherapie.html`
 - **BioSlimming** (enveloppement minceur thermo-actif) → `/services/bioslimming.html` _(photo en attente, placeholder CSS en place)_
 - **Drainage lymphatique** → `/services/drainage-lymphatique.html`
@@ -49,6 +51,8 @@ Terre-Sereine/
 │   ├── headspa.html
 │   ├── hydra-face.html
 │   ├── nanoneedling.html
+│   ├── dermalogica.html
+│   ├── house-of-peau.html
 │   ├── maderotherapie.html
 │   ├── bioslimming.html
 │   ├── drainage-lymphatique.html
@@ -107,6 +111,7 @@ Terre-Sereine/
 17. **Passage à 3 marques partenaires** (2026-04-30) : House of Peau (initialement en attente) confirmée par Claudia. Layout `marques-grid` passe de 2 à 3 colonnes via classe additive `.marques-grid-3` (responsive 3 → 2 → 1 col à 1100px et 720px). Logo image (vs wordmark texte) intégré via classe `.marque-logo-img`.
 18. **Texte Dermalogica & Hydra Face mis au ton Claudia** (2026-04-30) : approche plus orientée "expérience cabine + routine maison" plutôt que "histoire de la marque".
 19. **Section maison a-propos réécrite** (2026-04-30) : nouveau texte "Histoire de passion, de peau et d'équilibre" fourni par Claudia. Eyebrow passe de "— Philosophie" à "— Notre histoire". Tagline italique en bas du bloc maison via classe `.maison-tagline`.
+20. **Ajout 2 services visage Dermalogica & House of Peau** (2026-05-05) : services distincts d'Hydra Face. Dermalogica = soins manuels (Signature 30 min/1 h + 4 ciblés Pro Bright/Calm/Clear/Firm) avec diagnostic Face Mapping®. House of Peau = soins holistiques (Lift Elixir, Hydra Boost, Acné Solution, Sébum Control, Sensitive Skin). Pages structurées en variante multi-protocoles : `service-detail` intro marque + suite de `page-section narrow` (un protocole par section, eyebrow + h2 + lede + `service-bullets` + ligne « Idéal pour »). Total : 10 rituels. Photos client en attente → placeholders CSS (`.photo-placeholder` et variante `.photo-placeholder-sm` dans la grille services). Position dans le menu : après Nanoneedling pour grouper les soins visage.
 
 ## Animations CSS partagées
 - `heroGlide` (46s linear infinite) : utilisé par `.hero::before` ET `.page-header::before`
