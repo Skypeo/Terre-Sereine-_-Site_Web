@@ -5,11 +5,12 @@ Site vitrine multi-pages pour un institut de beauté **en création** à Woippy 
 
 Issu d'une maquette one-page validée par le client (commit `4a1fb92`), désormais éclaté en site classique avec pages Services, À propos, Galerie, Contact.
 
-## Services proposés (7 rituels)
+## Services proposés (8 rituels)
 - **Headspa** (rituel capillaire japonais) → `/services/headspa.html`
 - **Hydra Face** (soin visage Dermalogica) → `/services/hydra-face.html`
-- **Nanoneedling** (soin visage éclat, micro-pointes) → `/services/nanoneedling.html` _(photo en attente, placeholder CSS en place)_
+- **Nanoneedling** (soin visage éclat, micro-pointes) → `/services/nanoneedling.html`
 - **Maderothérapie** (soin corps Bioslimming) → `/services/maderotherapie.html`
+- **BioSlimming** (enveloppement minceur thermo-actif) → `/services/bioslimming.html` _(photo en attente, placeholder CSS en place)_
 - **Drainage lymphatique** → `/services/drainage-lymphatique.html`
 - **Sauna dôme infrarouge** → `/services/sauna-dome.html`
 - **Massage pierres chaudes** → `/services/pierres-chaudes.html`
@@ -43,12 +44,13 @@ Typos : Playfair Display (titres + accents italiques), Montserrat (corps). Deux 
 Terre-Sereine/
 ├── index.html                      # Accueil (design intact depuis la maquette)
 ├── a-propos.html                   # Maison + valeurs + marques partenaires
-├── services.html                   # Liste des 6 rituels
+├── services.html                   # Liste des 8 rituels
 ├── services/
 │   ├── headspa.html
 │   ├── hydra-face.html
 │   ├── nanoneedling.html
 │   ├── maderotherapie.html
+│   ├── bioslimming.html
 │   ├── drainage-lymphatique.html
 │   ├── sauna-dome.html
 │   └── pierres-chaudes.html

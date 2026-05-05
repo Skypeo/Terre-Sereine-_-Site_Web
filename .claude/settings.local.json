@@ -20,7 +20,10 @@
       "mcp__puppeteer__puppeteer_evaluate",
       "WebFetch(domain:api.anthropic.com)",
       "Bash(mkdir -p /tmp/terre-handoff)",
-      "Bash(unzip -o \"/c/Users/monke/Dropbox/Mon PC \\(LAPTOP-S0HITGG5\\)/Downloads/Terre sereine-handoff.zip\")"
+      "Bash(unzip -o \"/c/Users/monke/Dropbox/Mon PC \\(LAPTOP-S0HITGG5\\)/Downloads/Terre sereine-handoff.zip\")",
+      "Bash(ffmpeg -y -i \"C:/Users/monke/OneDrive/Bureau/Site_Claude_Code/Terre-Sereine/assets/images/nanoneedling.png\" -c:v libwebp -quality 80 -compression_level 6 -preset photo -vf \"scale='min\\(1600,iw\\)':-2\" \"C:/Users/monke/OneDrive/Bureau/Site_Claude_Code/Terre-Sereine/assets/images/nanoneedling.webp\")",
+      "Bash(ffmpeg -y -i \"C:/Users/monke/OneDrive/Bureau/Site_Claude_Code/Terre-Sereine/assets/images/nanoneedling.png\" -c:v libwebp -quality 72 -compression_level 6 -preset photo -map_metadata -1 -vf \"scale='min\\(1200,iw\\)':-2\" \"C:/Users/monke/OneDrive/Bureau/Site_Claude_Code/Terre-Sereine/assets/images/nanoneedling.webp\")",
+      "Bash(awk 'NR==3736,/^}/{print NR\": \"$0; if\\(/^}/\\) exit}' \"C:/Users/monke/OneDrive/Bureau/Site_Claude_Code/Terre-Sereine/assets/css/styles.css\")"
     ]
   }
 }
