@@ -1,0 +1,15 @@
+# Secrets / config locale
+assets/js/web3forms-config.js
+
+# OS / éditeurs
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
+
+# Node (au cas où on ajoute un build step plus tard)
+node_modules/
+npm-debug.log*
+yarn-error.log*

@@ -1,0 +1,16 @@
+{
+  "name": "Terre Sereine — Maison de bien-être & de beauté",
+  "short_name": "Terre Sereine",
+  "description": "Institut de beauté & spa à Woippy (57140), à deux pas de Metz.",
+  "lang": "fr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#F0E3CD",
+  "background_color": "#FBF6ED",
+  "icons": [
+    { "src": "android-chrome-192x192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "android-chrome-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

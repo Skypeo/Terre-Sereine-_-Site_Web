@@ -30,7 +30,7 @@
   const mobileMenu = document.getElementById('mobileMenu');
   const mobileClose = document.getElementById('mobileClose');
   const agate = document.getElementById('agate');
-  const agateRings = agate ? agate.querySelectorAll('circle:not(.center-dot)') : [];
+  const agateRings = agate ? agate.querySelectorAll('circle') : [];
 
   // Scroll : scrolled state header + visibilité agate + remplissage anneaux
   if (header || agate) {
@@ -116,17 +116,121 @@
     });
   }
 
-  // Formulaire de contact : démo (pas de backend pour l'instant)
+  // Formulaire de contact : envoi via Web3Forms (clé dans web3forms-config.js, gitignored)
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    const successBox = document.getElementById('form-success');
+    const errorBox = document.getElementById('form-error');
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const accessKeyInput = contactForm.querySelector('input[name="access_key"]');
+
+    // Injection de la clé Web3Forms (depuis window.WEB3FORMS_KEY)
+    if (accessKeyInput && typeof window.WEB3FORMS_KEY === 'string') {
+      accessKeyInput.value = window.WEB3FORMS_KEY;
+    }
+
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const success = document.getElementById('form-success');
-      if (success) {
-        success.classList.add('show');
-        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      if (errorBox) errorBox.hidden = true;
+      if (successBox) successBox.classList.remove('show');
+
+      // Garde-fou : si la clé n'est pas chargée, on bloque
+      if (!accessKeyInput || !accessKeyInput.value) {
+        if (errorBox) {
+          errorBox.hidden = false;
+          errorBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        return;
       }
-      contactForm.reset();
+
+      const originalLabel = submitBtn ? submitBtn.innerHTML : '';
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Envoi en cours…';
+      }
+
+      try {
+        const formData = new FormData(contactForm);
+        const res = await fetch(contactForm.action, {
+          method: 'POST',
+          body: formData,
+          headers: { Accept: 'application/json' }
+        });
+        const data = await res.json().catch(() => ({}));
+
+        if (res.ok && data.success) {
+          if (successBox) {
+            successBox.classList.add('show');
+            successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+          contactForm.reset();
+          // Re-injection de la clé après reset (les hidden inputs perdent leur valeur)
+          if (accessKeyInput) accessKeyInput.value = window.WEB3FORMS_KEY;
+        } else {
+          throw new Error(data.message || 'Submission failed');
+        }
+      } catch (err) {
+        if (errorBox) {
+          errorBox.hidden = false;
+          errorBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalLabel;
+        }
+      }
     });
+  }
+
+  // === REVEAL ON SCROLL : apparition en cascade des éléments de section ===
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduce && 'IntersectionObserver' in window) {
+    // Sélecteurs ciblant des "feuilles" (pas de nesting parent/enfant entre eux)
+    // pour éviter qu'un parent caché bloque l'apparition de ses enfants.
+    const revealSelectors = [
+      '.hero-text > *', '.hero-photo',
+      '.maison-text > *', '.maison-photos',
+      '.rituels-head > *', '.rituels-grid > .rituel',
+      '.marques-eyebrow', '.marques h2', '.marques-intro',
+      '.marques-grid > .marque',
+      '.rdv-text > *', '.rdv-photo',
+      '.service-detail-photo',
+      '.service-detail-meta', '.service-detail h2', '.service-detail-lede',
+      '.service-bullets', '.service-cta',
+      '.service-info > *',
+      '.page-section > *',
+      '.related-services h2', '.related-grid > .related-card',
+      '.gallery-head > *', '.gallery-grid > figure',
+      '.contact-inner > *',
+      '.page-header > *',
+      '.final-cta-inner > *',
+      '.legal-content > *',
+      '.about-values-grid > *',
+    ].join(',');
+
+    const items = Array.from(document.querySelectorAll(revealSelectors));
+    items.forEach(el => el.classList.add('reveal'));
+
+    // Stagger : index de l'élément parmi ses voisins .reveal du même parent
+    items.forEach(el => {
+      const siblings = Array.from(el.parentElement.children).filter(c => c.classList.contains('reveal'));
+      const idx = siblings.indexOf(el);
+      if (idx > 0) {
+        const delay = Math.min(idx * 0.08, 0.5);
+        el.style.setProperty('--reveal-delay', delay + 's');
+      }
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
+
+    items.forEach(el => observer.observe(el));
   }
 })();

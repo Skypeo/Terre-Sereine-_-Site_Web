@@ -20,8 +20,11 @@
   <meta property="og:url" content="https://terre-sereine.fr/services/headspa.html">
   <meta property="og:image" content="https://terre-sereine.fr/assets/images/headspa-rituel-capillaire.webp">
 
-  <link rel="icon" type="image/png" href="../assets/logoTerreSereine-sansFond.png">
-  <link rel="apple-touch-icon" href="../assets/logoTerreSereine-sansFond.png">
+  <link rel="icon" type="image/x-icon" href="../assets/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="../assets/favicon/site.webmanifest">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,10 +62,8 @@
   <!-- Loader (premier chargement) -->
   <div class="site-loader" id="siteLoader" role="status" aria-label="Chargement de Terre Sereine">
     <div class="site-loader-col">
-      <div class="site-loader-rond"><img src="../assets/loader/logo-round-feathered.png" alt="" width="220"
-          height="220"></div>
-      <div class="site-loader-text"><img src="../assets/loader/logo-text-feathered.png"
-          alt="Terre Sereine — Maison de Bien-être &amp; de Beauté"></div>
+      <div class="site-loader-rond"><img src="../assets/loader/logo-round.webp" alt="" width="440" height="440" fetchpriority="high"></div>
+      <div class="site-loader-text"><img src="../assets/loader/logo-text.webp" alt="Terre Sereine — Maison de Bien-être &amp; de Beauté" width="1200" height="472" fetchpriority="high"></div>
     </div>
   </div>
 
@@ -95,14 +96,13 @@
         </div>
       </div>
       <a href="../galerie.html">Galerie</a>
-      <a href="../contact.html">Contact</a>
     </nav>
     <div class="nav-cta-wrap">
-      <div class="nav-hours">
-        <strong>Lun — Sam</strong>
-        <span>9h — 18h</span>
+      <div class="nav-icons">
+        <a href="tel:+33669174714" class="nav-icon-link" aria-label="Appeler Terre Sereine"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 6 6L15 14l5 2v3a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></a>
+        <a href="https://www.instagram.com/terresereine.institut?igsh=MWg4NzFudWt6dDd4eQ==" target="_blank" rel="noopener noreferrer" class="nav-icon-link" aria-label="Instagram Terre Sereine"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.7" fill="currentColor" stroke="none"/></svg></a>
       </div>
-      <a href="../contact.html" class="nav-cta"><span class="dot"></span>Prendre rendez-vous</a>
+      <a href="../contact.html" class="nav-cta"><span class="dot"></span>Prendre RDV</a>
     </div>
     <button class="burger" id="burger" aria-label="Menu" aria-controls="mobileMenu"
       aria-expanded="false"><span></span><span></span></button>
@@ -154,26 +154,24 @@
           </ul>
         </div>
         <a href="../galerie.html" class="mobile-link"><span class="mobile-num">04</span><span>Galerie</span></a>
-        <a href="../contact.html" class="mobile-link"><span class="mobile-num">05</span><span>Contact</span></a>
       </nav>
 
       <div class="mobile-meta">
         <span class="mobile-nav-eyebrow">Nous joindre</span>
-        <a href="tel:+33387000000" class="mobile-meta-link">03 87 00 00 00</a>
+        <a href="tel:+33669174714" class="mobile-meta-link">+33 6 69 17 47 14</a>
         <a href="mailto:contact@terresereine.fr" class="mobile-meta-link">contact@terresereine.fr</a>
-        <span class="mobile-meta-text">Lun — Sam · 9h à 18h</span>
+        <div class="mobile-meta-icons">
+          <a href="tel:+33669174714" class="mobile-meta-icon" aria-label="Appeler Terre Sereine"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 6 6L15 14l5 2v3a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></a>
+          <a href="mailto:contact@terresereine.fr" class="mobile-meta-icon" aria-label="Envoyer un email"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M3 7l9 6 9-6"/></svg></a>
+          <a href="https://www.instagram.com/terresereine.institut?igsh=MWg4NzFudWt6dDd4eQ==" target="_blank" rel="noopener noreferrer" class="mobile-meta-icon" aria-label="Instagram Terre Sereine"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.7" fill="currentColor" stroke="none"/></svg></a>
+        </div>
       </div>
 
       <a href="../contact.html" class="mobile-cta">
-        <span>Prendre rendez-vous</span>
+        <span>Prendre RDV</span>
         <span class="mobile-cta-arrow">→</span>
       </a>
 
-      <div class="mobile-socials">
-        <a href="#" rel="noopener">Instagram</a>
-        <span aria-hidden="true">·</span>
-        <a href="#" rel="noopener">Facebook</a>
-      </div>
     </div>
   </div>
 
@@ -183,7 +181,6 @@
       <circle cx="50" cy="50" r="33" />
       <circle cx="50" cy="50" r="24" />
       <circle cx="50" cy="50" r="15" />
-      <circle class="center-dot" cx="50" cy="50" r="6" />
     </svg>
     <svg class="agate-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
       stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -221,7 +218,7 @@
         <div class="service-detail-meta">
           <span>Soin capillaire</span>
         </div>
-        <h1>Head <span class="i">Spa</span></h1>
+        <h2>Head <span class="i">Spa</span></h2>
         <p class="lede">Importé du Japon, le Headspa est bien plus qu'un shampooing. C'est un rituel sensoriel complet,
           pensé autour du massage du cuir chevelu et de la circulation crânienne.</p>
 
@@ -264,6 +261,15 @@
             <dt>Fréquence</dt>
             <dd>1× par mois</dd>
           </div>
+          <div class="service-info-full service-info-tarifs">
+            <dt>Tarifs</dt>
+            <dd>
+              <span class="tarif-line"><span class="tarif-label">Rituel Terre Pure · 45 min</span><span class="tarif-price">100&nbsp;€</span></span>
+              <span class="tarif-line"><span class="tarif-label">Rituel Terre Douce · 1 h</span><span class="tarif-price">120&nbsp;€</span></span>
+              <span class="tarif-line"><span class="tarif-label">Rituel Terre Vitale · 1 h 15</span><span class="tarif-price">130&nbsp;€</span></span>
+              <span class="tarif-line"><span class="tarif-label">Terre Sacrée · Signature Luxe · 1 h 30</span><span class="tarif-price">150&nbsp;€</span></span>
+            </dd>
+          </div>
         </dl>
 
         <div class="prose">
@@ -290,20 +296,40 @@
       <h2>Découvrir d'autres <span class="i">rituels</span></h2>
       <div class="related-grid">
         <a class="related-card" href="hydra-face.html">
-          <div class="related-card-thumb"><img src="../assets/images/hydra-face-soin-visage.webp" alt="" width="64"
-              height="64" loading="lazy"></div>
+          <div class="related-card-thumb"><img src="../assets/images/hydra-face.webp" alt="" width="64" height="64" loading="lazy"></div>
           <div><span class="label">Soin visage</span><span class="name">Hydra <span class="i">Face</span></span></div>
         </a>
-        <a class="related-card" href="pierres-chaudes.html">
-          <div class="related-card-thumb"><img src="../assets/images/massage-pierres-chaudes.webp" alt="" width="64"
-              height="64" loading="lazy"></div>
-          <div><span class="label">Massage signature</span><span class="name">Pierres <span
-                class="i">chaudes</span></span></div>
+        <a class="related-card" href="nanoneedling.html">
+          <div class="related-card-thumb"><img src="../assets/images/nanoneedling.webp" alt="" width="64" height="64" loading="lazy"></div>
+          <div><span class="label">Soin visage éclat</span><span class="name">Nano<span class="i">needling</span></span></div>
+        </a>
+        <a class="related-card" href="dermalogica.html">
+          <div class="related-card-thumb"><img src="../assets/images/dermalogica.webp" alt="" width="64" height="64" loading="lazy"></div>
+          <div><span class="label">Soins visage experts</span><span class="name">Derma<span class="i">logica</span></span></div>
+        </a>
+        <a class="related-card" href="house-of-peau.html">
+          <div class="related-card-thumb"><img src="../assets/images/house-of-peau-soin.webp" alt="" width="64" height="64" loading="lazy"></div>
+          <div><span class="label">Soin visage holistique</span><span class="name">House of <span class="i">Peau</span></span></div>
+        </a>
+        <a class="related-card" href="maderotherapie.html">
+          <div class="related-card-thumb"><img src="../assets/images/maderotherapie-outils-bois.webp" alt="" width="64" height="64" loading="lazy"></div>
+          <div><span class="label">Soin corps</span><span class="name">Madero<span class="i">thérapie</span></span></div>
+        </a>
+        <a class="related-card" href="bioslimming.html">
+          <div class="related-card-thumb"><img src="../assets/images/bioslimming.webp" alt="" width="64" height="64" loading="lazy"></div>
+          <div><span class="label">Soin corps minceur</span><span class="name">Bio<span class="i">Slimming</span></span></div>
+        </a>
+        <a class="related-card" href="drainage-lymphatique.html">
+          <div class="related-card-thumb"><img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=128&q=80" alt="" width="64" height="64" loading="lazy"></div>
+          <div><span class="label">Soin minceur</span><span class="name">Drainage <span class="i">lymphatique</span></span></div>
         </a>
         <a class="related-card" href="sauna-dome.html">
-          <div class="related-card-thumb"><img src="../assets/images/sauna-dome-infrarouge.webp" alt="" width="64"
-              height="64" loading="lazy"></div>
+          <div class="related-card-thumb"><img src="../assets/images/sauna-dome-infrarouge.webp" alt="" width="64" height="64" loading="lazy"></div>
           <div><span class="label">Chaleur sèche</span><span class="name">Sauna <span class="i">Dôme</span></span></div>
+        </a>
+        <a class="related-card" href="pierres-chaudes.html">
+          <div class="related-card-thumb"><img src="../assets/images/massage-pierres-chaudes.webp" alt="" width="64" height="64" loading="lazy"></div>
+          <div><span class="label">Massage signature</span><span class="name">Pierres <span class="i">chaudes</span></span></div>
         </a>
       </div>
     </div>
@@ -343,10 +369,11 @@
       <div class="footer-col">
         <h5>Contact</h5>
         <ul>
-          <li><a href="tel:+33387000000">03 87 00 00 00</a></li>
-          <li><a href="mailto:contact@terresereine.fr">contact@terresereine.fr</a></li>
-          <li><a href="#" rel="noopener">Instagram</a></li>
-          <li><a href="#" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=5+Imp.+du+Saule+57140+Woippy" target="_blank" rel="noopener noreferrer"><svg class="footer-contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-7.5-7-12a7 7 0 0 1 14 0c0 4.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><span>5 Imp. du Saule · 57140 Woippy</span></a></li>
+          <li><a href="tel:+33669174714"><svg class="footer-contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 6 6L15 14l5 2v3a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span>+33 6 69 17 47 14</span></a></li>
+          <li><a href="mailto:contact@terresereine.fr"><svg class="footer-contact-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M3 7l9 6 9-6"/></svg><span>contact@terresereine.fr</span></a></li>
+          <li><a href="https://www.instagram.com/terresereine.institut?igsh=MWg4NzFudWt6dDd4eQ==" target="_blank" rel="noopener noreferrer"><svg class="footer-contact-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.7" fill="currentColor" stroke="none"/></svg><span>Instagram</span></a></li>
+          <li class="footer-hours-item"><svg class="footer-contact-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Lun — Sam · 9h — 18h</span></li>
         </ul>
       </div>
     </div>
