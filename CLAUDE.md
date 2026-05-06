@@ -146,8 +146,8 @@ Terre-Sereine/
 ## Placeholders à compléter avant mise en ligne
 
 - ~~Adresse exacte de l'institut~~ ✅ confirmée le 2026-05-06 : **5 Imp. du Saule, 57140 Woippy** (lat 49.1470881 / lon 6.1550850, source Nominatim OSM). Propagée sur footer (17 pages), contact, mentions légales, JSON-LD home, bloc RDV home, iframe OSM.
-- Forme juridique, SIRET, RCS, capital, TVA intracommunautaire
-- Hébergeur (nom + adresse)
+- ~~Forme juridique, SIRET, RCS, capital, TVA~~ ✅ confirmés le 2026-05-06 : SARL au capital de **8 000 €**, **SIREN 100 513 845**, **SIRET 100 513 845 00014**, **TVA FR72100513845**, **RCS Metz** (inscrit le 30/01/2026). Dénomination officielle : **TERRE SEREINE — MAISON DE BIEN-ÊTRE & DE BEAUTÉ**. Gérantes co-fondatrices : **BOUKHEZER Chloé** et **CORNILLE Claudia**. Tout intégré dans `mentions-legales.html`, `politique-confidentialite.html` et `index.html` JSON-LD (`legalName`, `vatID`, `taxID`, `founder.name` mis à jour avec noms complets + `jobTitle`).
+- ~~Hébergeur~~ ✅ confirmé : **HOSTINGER INTERNATIONAL LTD**, 61 Lordou Vironos Street, 6023 Larnaca, Chypre. Pas de téléphone public, lien vers la page contact Hostinger dans les mentions légales.
 - Email réel (actuel : `contact@terresereine.fr` placeholder). Téléphone confirmé : `+33 6 69 17 47 14` (mobile Claudia).
 - ~~Instagram~~ ✅ branché (`https://www.instagram.com/terresereine.institut`). Facebook retiré du site (pas de présence Meta).
 - ~~Tarifs des rituels~~ ✅ intégrés (2026-05-06). BioSlimming reste sans tarif explicite (à clarifier avec le client si différent du remodelage corps). Le dossier `assets/tarifs/` (screenshots client, 9 MB) a été supprimé une fois les tarifs intégrés.
