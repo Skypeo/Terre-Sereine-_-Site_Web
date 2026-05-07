@@ -55,7 +55,10 @@
       "Bash(cat .gitignore)",
       "Bash(grep -nA1 'name=\"description\"' services.html)",
       "Bash(git check-ignore *)",
-      "Bash(curl -s -A \"TerreSereine-Site/1.0 \\(contact@terresereine.fr\\)\" \"https://nominatim.openstreetmap.org/search?q=5+Impasse+du+Saule+57140+Woippy&format=json&limit=1\")"
+      "Bash(curl -s -A \"TerreSereine-Site/1.0 \\(contact@terresereine.fr\\)\" \"https://nominatim.openstreetmap.org/search?q=5+Impasse+du+Saule+57140+Woippy&format=json&limit=1\")",
+      "Bash(ffmpeg -i assets/images/new_head_spa.png)",
+      "Bash(ffmpeg -y -i assets/images/new_head_spa.png -c:v libwebp -quality 82 -compression_level 6 -preset photo assets/images/headspa-rituel-capillaire.webp)",
+      "Bash(python *)"
     ]
   }
 }
